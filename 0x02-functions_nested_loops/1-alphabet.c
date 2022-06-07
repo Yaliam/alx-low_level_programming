@@ -1,5 +1,3 @@
-1-alphabet
-
 #include"main.h"
 
 /**
