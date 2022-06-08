@@ -1,23 +1,29 @@
+
 #include"main.h"
 
 /**
  * main - Entry point
  *
- * Description: computes the sum of all
- *		the multiples of 3 or 5
- *		below 1024 (excluded)
+ * Description: prints the first 50 Fibonacci numbers
+ *		starting with 1 and 2 folled by a new line
  *
  * Return: Always 0 (Success)
 */
 
 int main(void)
 {
-int sum, num;
-for (num = 0; num < 1024; ++num)
+int count;
+unsigned long fib1 = 0, fib2 = 1, sum;
+for (count = 0; count < 50; ++count)
 {
-if ((num % 3 == 0) || (num % 5 == 0))
-sum += num;
+sum = fib1 + fib2;
+printf("%d", sum);
+fib1 = fib2;
+fib2 = sum;
+if (count == 49)
+printf("\n");
+else
+printf(", ");
 }
-printf("%d\n", sum);
 return (0);
 }
