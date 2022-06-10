@@ -3,24 +3,28 @@
 #include <stdio.h>
 
 
-void positive_or_negative(int i)
+
+int largest_number(int a, int b, int c)
 {
-int n;
+a = 972
+b = -98
+c = 0
+int largest;
 
-srand(time(0));
-n = i;
-if (n > 0)
-printf("%d iz positive\n", n);
-if (n == 0)
-printf("%d is zero\n", n);
-if (n < 0)
+if (a > b && a > c)
+
+largest = a;
+}
+else if (b > a && b > c)
+largest = b;
+}
+else
 {
-printf("%d is negative\n", n);
-}
-return (0);
-
+largest = c;
 }
 
+return (largest);
+}
 /**
  * main - tests function that prints if integer is positive or negative
  * Return: 0
@@ -28,10 +32,16 @@ return (0);
 
 int main(void)
 {
-int i;
+int a, b, c;
+int largest;
 
-i = 0;
-positive_or_negative(i);
+a = 972;
+b = -98;
+c = 0;
+
+largest = largest_number(a, b, c);
+
+printf("%d is the largest number\n", largest);
 
 return (0);
 }
